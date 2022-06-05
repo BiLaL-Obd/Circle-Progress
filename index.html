@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle Progress</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="chart" data-percent="85">85%</div>
+        <div class="text">HTML</div>
+      </div>
+      <div class="box">
+        <div class="chart" data-percent="85">85%</div>
+        <div class="text">CSS</div>
+      </div>
+      <div class="box">
+        <div class="chart" data-percent="75">75%</div>
+        <div class="text">JavaScript</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="jqueryPath/jquery.easypiechart.js"></script>
+    <script>
+      $(function () {
+        $(".chart").easyPieChart({
+          size: 120,
+          barColor: "yellow",
+          scaleColor: false,
+          lineWidth: 6,
+          trackColor: "black",
+          lineCap: "circle",
+          animate: 1100,
+        });
+      });
+    </script>
+  </body>
+</html>
